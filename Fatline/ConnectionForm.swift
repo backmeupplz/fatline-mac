@@ -2,13 +2,14 @@ import SwiftUI
 
 /// The ways this app can reach Farcaster. Setup leads with a Neynar key.
 enum ConnectionKind: CaseIterable, Hashable {
-    case neynar, code, custom
+    case neynar, code, hypersnap, custom
 
     init(_ choice: ConnectionChoice) {
         switch choice {
         case .neynarKey: self = .neynar
         case .invite: self = .code
         case .custom: self = .custom
+        case .hypersnap: self = .hypersnap
         }
     }
 
@@ -16,6 +17,7 @@ enum ConnectionKind: CaseIterable, Hashable {
         switch self {
         case .neynar: "Connect to Farcaster"
         case .code: "Use a code"
+        case .hypersnap: "Use Hypersnap"
         case .custom: "Connect your server"
         }
     }
@@ -24,6 +26,7 @@ enum ConnectionKind: CaseIterable, Hashable {
         switch self {
         case .neynar: "Paste your Neynar API key."
         case .code: "Enter the code and server you were given."
+        case .hypersnap: "Read and post through Hypersnap, a public Farcaster node run by Quilibrium. No key needed."
         case .custom: "Enter your server’s HTTPS base URL."
         }
     }
@@ -32,6 +35,7 @@ enum ConnectionKind: CaseIterable, Hashable {
         switch self {
         case .neynar: "Neynar Key"
         case .code: "Code"
+        case .hypersnap: "Hypersnap"
         case .custom: "Advanced"
         }
     }
@@ -40,6 +44,7 @@ enum ConnectionKind: CaseIterable, Hashable {
         switch self {
         case .neynar: "connection-neynar"
         case .code: "connection-code"
+        case .hypersnap: "connection-hypersnap"
         case .custom: "connection-custom"
         }
     }
@@ -48,6 +53,7 @@ enum ConnectionKind: CaseIterable, Hashable {
         switch self {
         case .neynar: "Invalid key."
         case .code: "Use the format code@server.example."
+        case .hypersnap: ""
         case .custom: "Enter an HTTPS URL."
         }
     }
@@ -189,7 +195,7 @@ struct ConnectionForm: View {
         case .invite(let savedInvite): code = savedInvite.text
         case .neynarKey(let savedKey): key = savedKey
         case .custom(let url): address = url.absoluteString
-        case nil: break
+        case .hypersnap, nil: break
         }
         _kind = State(initialValue: kind)
         _code = State(initialValue: code)
@@ -205,6 +211,7 @@ struct ConnectionForm: View {
         case .code: ConnectionChoice.invite(typed: code)
         case .neynar: ConnectionChoice.neynarKey(typed: key)
         case .custom: ConnectionChoice.custom(typed: address)
+        case .hypersnap: .hypersnap
         }
     }
 
@@ -213,6 +220,7 @@ struct ConnectionForm: View {
         case .code: !code.isEmpty
         case .neynar: !key.isEmpty
         case .custom: !address.isEmpty
+        case .hypersnap: true
         }
     }
 
@@ -294,7 +302,8 @@ struct ConnectionForm: View {
 
     private var entry: some View {
         VStack(alignment: .leading, spacing: 8) {
-            field
+            // Hypersnap has nothing to type.
+            if kind != .hypersnap { field }
             secondaryActions
             if let error {
                 Text(error)
@@ -319,6 +328,8 @@ struct ConnectionForm: View {
             case .custom:
                 TextField("Server URL", text: $address, prompt: placeholder("https://example.com"))
                     .accessibilityLabel("Server URL")
+            case .hypersnap:
+                EmptyView()
             }
         }
         .focused($fieldFocused)
@@ -358,6 +369,11 @@ struct ConnectionForm: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityIdentifier("connection-invite-server")
             }
+        case .hypersnap:
+            Text("Your reads and posts will go through \(Connection.hypersnap.feedBase.host() ?? "").")
+                .font(FatlineStyle.meta)
+                .foregroundStyle(FatlineStyle.secondary)
+                .fixedSize(horizontal: false, vertical: true)
         case .custom:
             ViewThatFits(in: .horizontal) {
                 HStack(spacing: 8) { agentButtons }
@@ -371,6 +387,9 @@ struct ConnectionForm: View {
         Button("Use code") { go(to: .code, open) }
             .buttonStyle(FatlineOutlineButton(fills: true))
             .accessibilityIdentifier(ConnectionKind.code.identifier)
+        Button("Hypersnap") { go(to: .hypersnap, open) }
+            .buttonStyle(FatlineOutlineButton(fills: true))
+            .accessibilityIdentifier(ConnectionKind.hypersnap.identifier)
         Button("Advanced") { go(to: .custom, open) }
             .buttonStyle(FatlineOutlineButton(fills: true))
             .accessibilityIdentifier(ConnectionKind.custom.identifier)

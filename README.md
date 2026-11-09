@@ -23,12 +23,13 @@ If you want any of that, use another client or fork this one.
 
 ## Connecting
 
-Setup asks for a Neynar key, with buttons to use a code or a custom server instead. Settings has the same three on one screen.
+Setup asks for a Neynar key, with buttons to use a code, Hypersnap or a custom server instead. Settings has the same four on one screen.
 
 | Option | What you need | Who pays for reads |
 | --- | --- | --- |
 | Neynar key | A key from [dev.neynar.com](https://dev.neynar.com) | Your Neynar account |
 | Code | A code written as `code@server.example` | Whoever issued it |
+| Hypersnap | Nothing | [Quilibrium](https://quilibrium.com), which runs the public node at `haatz.quilibrium.com` |
 | Advanced | An HTTPS server that answers Neynar's feed routes and Snapchain's | Whoever runs it |
 
 Anyone can run either kind of server. To set up a custom server, give a coding agent [this guide](https://fatline.tech/custom-server.md), or deploy [fatline-server](https://github.com/danromero/fatline-server) yourself. [docs/SERVER.md](docs/SERVER.md) describes what an invite server has to answer.

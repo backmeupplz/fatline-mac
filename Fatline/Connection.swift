@@ -39,6 +39,15 @@ struct Connection: Hashable, Sendable {
         )
     }
 
+    /// Quilibrium's public Hypersnap node, which answers both Neynar's feed routes and Snapchain's
+    /// without a key.
+    static let hypersnap = Connection(
+        name: "Hypersnap",
+        feedBase: URL(string: "https://haatz.quilibrium.com/v2/farcaster")!,
+        nodeBase: URL(string: "https://haatz.quilibrium.com/v1")!,
+        header: nil
+    )
+
     /// A server that answers both Neynar's feed routes and Snapchain's.
     static func custom(_ url: URL) -> Connection {
         Connection(
@@ -148,6 +157,7 @@ enum ConnectionChoice: Codable, Equatable, Sendable {
     case invite(Invite)
     case neynarKey(String)
     case custom(URL)
+    case hypersnap
 
     private static let item = KeychainValue<ConnectionChoice>(account: "connection-v1")
 
@@ -156,6 +166,7 @@ enum ConnectionChoice: Codable, Equatable, Sendable {
         case .invite(let invite): .invite(invite)
         case .neynarKey(let key): .neynar(key: key)
         case .custom(let url): .custom(url)
+        case .hypersnap: .hypersnap
         }
     }
 
@@ -243,6 +254,7 @@ enum ConnectionChoice: Codable, Equatable, Sendable {
         case (402, .neynarKey): "This key is out of credits."
         case (401, .custom), (403, .custom): "That server requires a key. Fatline can’t send one."
         case (404, .custom): missingRoute(route)
+        case (401, .hypersnap), (403, .hypersnap): "Hypersnap turned this request away. Try again later."
         case (429, _): "Too many requests. Try again in a minute."
         default: "That server answered with an error (HTTP \(status)). Try again."
         }

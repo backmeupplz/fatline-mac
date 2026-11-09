@@ -372,7 +372,7 @@ final class ConnectionChoiceTests: XCTestCase {
     }
 
     func testAChoiceSurvivesBeingSaved() throws {
-        for choice in [invite, .neynarKey("abc"), custom] {
+        for choice in [invite, .neynarKey("abc"), custom, .hypersnap] {
             XCTAssertEqual(try JSONDecoder().decode(ConnectionChoice.self, from: JSONEncoder().encode(choice)), choice)
         }
     }
@@ -440,6 +440,17 @@ final class ConnectionChoiceTests: XCTestCase {
         XCTAssertEqual(noNode, "This key can’t use Neynar’s Snapchain node.")
         let busy = await problem(feed: 429)
         XCTAssertEqual(busy, "Too many requests. Try again in a minute.")
+    }
+
+    func testHypersnapIsCheckedWithoutAKey() async {
+        let server = FakeServer { [feedPage, nodePage] request in
+            (200, request.url!.path().hasPrefix("/v2") ? feedPage : nodePage)
+        }
+        let problem = await ConnectionChoice.hypersnap.problem(send: server.send)
+        XCTAssertNil(problem)
+        XCTAssertEqual(server.requests.map { $0.url!.host() }, ["haatz.quilibrium.com", "haatz.quilibrium.com"])
+        XCTAssertEqual(server.requests.map { $0.url!.path() }, ["/v2/farcaster/feed/following/", "/v1/userDataByFid"])
+        XCTAssertEqual(server.requests.map { $0.value(forHTTPHeaderField: "x-api-key") }, [nil, nil])
     }
 
     func testAServerWithoutAFeedIsTurnedAway() async {
