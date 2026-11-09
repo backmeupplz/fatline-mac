@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		F471000000000000000000A1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		F471000000000000000000D0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		F471000000000000000000D6 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionForm.swift; sourceTree = "<group>"; };
+		F471000000000000000000D2 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReader.swift; sourceTree = "<group>"; };
+		F47100000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftStore.swift; sourceTree = "<group>"; };
+		F47100000000000000000006 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F47100000000000000000008 = {
+			isa = PBXGroup;
+			children = (F4710000000000000000F000, F47100000000000000000009, F471000000000000000000B4, F4710000000000000000000A);
+			sourceTree = "<group>";
+		};
+		F47100000000000000000009 = {
+			isa = PBXGroup;
+			children = (F47100000000000000000005, F47100000000000000000006, F47100000000000000000040, F47100000000000000000041, F47100000000000000000042, F47100000000000000000043, F47100000000000000000044, F47100000000000000000060, F47100000000000000000062, F47100000000000000000063, F47100000000000000000080, F47100000000000000000081, F47100000000000000000082, F47100000000000000000084, F471000000000000000000A1, F471000000000000000000D0, F471000000000000000000D2, F4710000000000000000E008, F4710000000000000000E009, F471000000000000000000D6, F4710000000000000000E500, F4710000000000000000E510, F4710000000000000000E000, F4710000000000000000E001, F4710000000000000000E002, F4710000000000000000E003, F4710000000000000000E004, F4710000000000000000E005, F4710000000000000000E006, F4710000000000000000E007, F4710000000000000000E00D, F4710000000000000000E00A);
+			path = Fatline;
+			sourceTree = "<group>";
+		};
+		F4710000000000000000000A = {
+			isa = PBXGroup;
+			children = (F4710000000000000000E00B, F4710000000000000000E00C);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4710000000000000000000E = {
+			isa = PBXProject;
+			attributes = { BuildIndependentTargetsInParallel = 1; };
+			buildConfigurationList = F4710000000000000000000F;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = F47100000000000000000008;
+			productRefGroup = F4710000000000000000000A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (F4710000000000000000E400, F4710000000000000000E410);
+		};
+		F4710000000000000000000F = {
+			isa = XCConfigurationList;
+			buildConfigurations = (F47100000000000000000011, F47100000000000000000012);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47100000000000000000011 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4710000000000000000F000;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F47100000000000000000012 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4710000000000000000F000;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F47100000000000000000040 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapchain.swift; sourceTree = "<group>"; };
+		F47100000000000000000041 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingAccount.swift; sourceTree = "<group>"; };
+		F47100000000000000000042 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Vendor/BLAKE3/blake3.c; sourceTree = "<group>"; };
+		F47100000000000000000043 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Vendor/BLAKE3/blake3_dispatch.c; sourceTree = "<group>"; };
+		F47100000000000000000044 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Vendor/BLAKE3/blake3_portable.c; sourceTree = "<group>"; };
+		F47100000000000000000060 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverySigner.swift; sourceTree = "<group>"; };
+		F47100000000000000000062 = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Recovery/authorize.js; sourceTree = "<group>"; };
+		F47100000000000000000063 = {isa = PBXFileReference; lastKnownFileType = text; path = Recovery/authorize.js.LEGAL.txt; sourceTree = "<group>"; };
+		F47100000000000000000080 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatlineStyle.swift; sourceTree = "<group>"; };
+		F47100000000000000000081 = {isa = PBXFileReference; lastKnownFileType = file; path = Fonts/Inter-Regular.ttf; sourceTree = "<group>"; };
+		F47100000000000000000082 = {isa = PBXFileReference; lastKnownFileType = file; path = Fonts/Inter-SemiBold.ttf; sourceTree = "<group>"; };
+		F47100000000000000000084 = {isa = PBXFileReference; lastKnownFileType = text; path = Fonts/Inter-LICENSE.txt; sourceTree = "<group>"; };
+		F471000000000000000000B4 = {isa = PBXGroup; children = (F471000000000000000000B5, F471000000000000000000B7, F471000000000000000000D4); path = FatlineUnitTests; sourceTree = "<group>"; };
+		F471000000000000000000B5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapchainTests.swift; sourceTree = "<group>"; };
+		F471000000000000000000B7 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCastTests.swift; sourceTree = "<group>"; };
+		F471000000000000000000D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReaderTests.swift; sourceTree = "<group>"; };
+		F4710000000000000000E000 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatlineApp.swift; sourceTree = "<group>"; };
+		F4710000000000000000E001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWindow.swift; sourceTree = "<group>"; };
+		F4710000000000000000E002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStates.swift; sourceTree = "<group>"; };
+		F4710000000000000000E003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMenu.swift; sourceTree = "<group>"; };
+		F4710000000000000000E004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindow.swift; sourceTree = "<group>"; };
+		F4710000000000000000E005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		F4710000000000000000E006 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerSheet.swift; sourceTree = "<group>"; };
+		F4710000000000000000E007 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F4710000000000000000E008 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSupport.swift; sourceTree = "<group>"; };
+		F4710000000000000000E009 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRows.swift; sourceTree = "<group>"; };
+		F4710000000000000000E00D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheck.swift; sourceTree = "<group>"; };
+		F4710000000000000000E00A = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4710000000000000000E00B = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Fatline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4710000000000000000E00C = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FatlineUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4710000000000000000E510 = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		F4710000000000000000E511 = {isa = PBXBuildFile; fileRef = F4710000000000000000E510; };
+		F4710000000000000000E100 = {isa = PBXBuildFile; fileRef = F47100000000000000000005; };
+		F4710000000000000000E101 = {isa = PBXBuildFile; fileRef = F47100000000000000000040; };
+		F4710000000000000000E102 = {isa = PBXBuildFile; fileRef = F47100000000000000000041; };
+		F4710000000000000000E103 = {isa = PBXBuildFile; fileRef = F47100000000000000000042; };
+		F4710000000000000000E104 = {isa = PBXBuildFile; fileRef = F47100000000000000000043; };
+		F4710000000000000000E105 = {isa = PBXBuildFile; fileRef = F47100000000000000000044; };
+		F4710000000000000000E106 = {isa = PBXBuildFile; fileRef = F47100000000000000000060; };
+		F4710000000000000000E107 = {isa = PBXBuildFile; fileRef = F47100000000000000000080; };
+		F4710000000000000000E108 = {isa = PBXBuildFile; fileRef = F471000000000000000000A1; };
+		F4710000000000000000E109 = {isa = PBXBuildFile; fileRef = F471000000000000000000D0; };
+		F4710000000000000000E10A = {isa = PBXBuildFile; fileRef = F471000000000000000000D2; };
+		F4710000000000000000E10B = {isa = PBXBuildFile; fileRef = F4710000000000000000E000; };
+		F4710000000000000000E10C = {isa = PBXBuildFile; fileRef = F4710000000000000000E001; };
+		F4710000000000000000E10D = {isa = PBXBuildFile; fileRef = F4710000000000000000E002; };
+		F4710000000000000000E10E = {isa = PBXBuildFile; fileRef = F4710000000000000000E003; };
+		F4710000000000000000E10F = {isa = PBXBuildFile; fileRef = F4710000000000000000E004; };
+		F4710000000000000000E110 = {isa = PBXBuildFile; fileRef = F4710000000000000000E005; };
+		F4710000000000000000E111 = {isa = PBXBuildFile; fileRef = F4710000000000000000E006; };
+		F4710000000000000000E112 = {isa = PBXBuildFile; fileRef = F4710000000000000000E007; };
+		F4710000000000000000E113 = {isa = PBXBuildFile; fileRef = F4710000000000000000E008; };
+		F4710000000000000000E114 = {isa = PBXBuildFile; fileRef = F4710000000000000000E009; };
+		F4710000000000000000E115 = {isa = PBXBuildFile; fileRef = F4710000000000000000E00D; };
+		F4710000000000000000E200 = {isa = PBXBuildFile; fileRef = F47100000000000000000006; };
+		F4710000000000000000E201 = {isa = PBXBuildFile; fileRef = F47100000000000000000062; };
+		F4710000000000000000E202 = {isa = PBXBuildFile; fileRef = F47100000000000000000063; };
+		F4710000000000000000E203 = {isa = PBXBuildFile; fileRef = F47100000000000000000081; };
+		F4710000000000000000E204 = {isa = PBXBuildFile; fileRef = F47100000000000000000082; };
+		F4710000000000000000E206 = {isa = PBXBuildFile; fileRef = F47100000000000000000084; };
+		F4710000000000000000E300 = {isa = PBXBuildFile; fileRef = F471000000000000000000B5; };
+		F4710000000000000000E301 = {isa = PBXBuildFile; fileRef = F471000000000000000000B7; };
+		F4710000000000000000E302 = {isa = PBXBuildFile; fileRef = F471000000000000000000D4; };
+		F4710000000000000000E402 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (F4710000000000000000E100, F4710000000000000000E101, F4710000000000000000E102, F4710000000000000000E103, F4710000000000000000E104, F4710000000000000000E105, F4710000000000000000E106, F4710000000000000000E107, F4710000000000000000E108, F4710000000000000000E109, F4710000000000000000E10A, F4710000000000000000E10B, F4710000000000000000E10C, F4710000000000000000E10D, F4710000000000000000E10E, F4710000000000000000E10F, F4710000000000000000E110, F4710000000000000000E111, F4710000000000000000E112, F4710000000000000000E113, F4710000000000000000E114, F4710000000000000000E115, F4710000000000000000E502, F4710000000000000000E503);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4710000000000000000E403 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (F4710000000000000000E511, F4710000000000000000E200, F4710000000000000000E201, F4710000000000000000E202, F4710000000000000000E203, F4710000000000000000E204, F4710000000000000000E206);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4710000000000000000E400 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4710000000000000000E401;
+			buildPhases = (F4710000000000000000E402, F4710000000000000000E403);
+			buildRules = ();
+			dependencies = ();
+			name = Fatline;
+			productName = Fatline;
+			productReference = F4710000000000000000E00B;
+			productType = "com.apple.product-type.application";
+		};
+		F4710000000000000000E401 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (F4710000000000000000E404, F4710000000000000000E405);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4710000000000000000E404 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Fatline/Fatline.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_APP_SANDBOX = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = ("$(inherited)", "BLAKE3_USE_NEON=0", BLAKE3_NO_SSE2, BLAKE3_NO_SSE41, BLAKE3_NO_AVX2, BLAKE3_NO_AVX512);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fatline/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 0.2.2;
+				PRODUCT_MODULE_NAME = Fatline;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Fatline/Fatline-Bridging-Header.h;
+				SWIFT_VERSION = 6.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fatline Dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FATLINE_BUNDLE_ID).dev";
+				PRODUCT_NAME = "Fatline Dev";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		F4710000000000000000E405 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Fatline/Fatline.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_APP_SANDBOX = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = ("$(inherited)", "BLAKE3_USE_NEON=0", BLAKE3_NO_SSE2, BLAKE3_NO_SSE41, BLAKE3_NO_AVX2, BLAKE3_NO_AVX512);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fatline/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 0.2.2;
+				PRODUCT_MODULE_NAME = Fatline;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Fatline/Fatline-Bridging-Header.h;
+				SWIFT_VERSION = 6.0;
+				INFOPLIST_KEY_CFBundleDisplayName = Fatline;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FATLINE_BUNDLE_ID)";
+				PRODUCT_NAME = Fatline;
+			};
+			name = Release;
+		};
+		F4710000000000000000E412 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (F4710000000000000000E300, F4710000000000000000E301, F4710000000000000000E302);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4710000000000000000E410 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4710000000000000000E411;
+			buildPhases = (F4710000000000000000E412);
+			buildRules = ();
+			dependencies = (F4710000000000000000E415);
+			name = FatlineUnitTests;
+			productName = FatlineUnitTests;
+			productReference = F4710000000000000000E00C;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4710000000000000000E411 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (F4710000000000000000E413, F4710000000000000000E414);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4710000000000000000E413 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FATLINE_BUNDLE_ID).unittests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fatline Dev.app/Contents/MacOS/Fatline Dev";
+			};
+			name = Debug;
+		};
+		F4710000000000000000E414 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FATLINE_BUNDLE_ID).unittests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fatline.app/Contents/MacOS/Fatline";
+			};
+			name = Release;
+		};
+		F4710000000000000000E415 = {isa = PBXTargetDependency; target = F4710000000000000000E400; targetProxy = F4710000000000000000E416; };
+		F4710000000000000000E416 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4710000000000000000000E;
+			proxyType = 1;
+			remoteGlobalIDString = F4710000000000000000E400;
+			remoteInfo = Fatline;
+		};
+		F4710000000000000000E500 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingSession.swift; sourceTree = "<group>"; };
+		F4710000000000000000E502 = {isa = PBXBuildFile; fileRef = F4710000000000000000E500; };
+		F4710000000000000000E503 = {isa = PBXBuildFile; fileRef = F471000000000000000000D6; };
+		F4710000000000000000F000 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+	};
+	rootObject = F4710000000000000000000E;
+}

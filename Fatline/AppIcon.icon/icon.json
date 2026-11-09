@@ -1,0 +1,30 @@
+{
+  "fill" : {
+    "solid" : "extended-srgb:0.03922,0.18431,0.11373,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "glass" : false,
+          "image-name" : "Portal.svg",
+          "name" : "Portal"
+        }
+      ],
+      "shadow" : {
+        "kind" : "none",
+        "opacity" : 0
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : false,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : [
+      "macOS"
+    ]
+  }
+}

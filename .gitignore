@@ -1,0 +1,15 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+DerivedData.noindex/
+build/
+.build/
+*.xcresult
+*.provisionprofile
+*.p12
+*.p8
+Signing.local.xcconfig
+node_modules/
+*.cer
+*.certSigningRequest

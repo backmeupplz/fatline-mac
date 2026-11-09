@@ -1,0 +1,6 @@
+// Who signs the app and what it's called. Copy Signing.local.example.xcconfig to
+// Signing.local.xcconfig, which Git ignores, and set your own values there.
+DEVELOPMENT_TEAM =
+FATLINE_BUNDLE_ID = com.example.fatline
+
+#include? "Signing.local.xcconfig"

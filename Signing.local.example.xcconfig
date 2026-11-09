@@ -1,0 +1,4 @@
+// Your Apple team ID, from developer.apple.com/account under Membership.
+DEVELOPMENT_TEAM = ABCDE12345
+// A bundle ID your team owns. Debug builds add .dev to it.
+FATLINE_BUNDLE_ID = com.example.fatline
